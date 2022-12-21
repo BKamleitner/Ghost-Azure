@@ -42,9 +42,6 @@ stages:
             echo "Yarn version after update:"
             yarn --version
 
-      - script: yarn add ghost-storage-cloudinary
-
-
       - task: UseNode@1
         inputs:
           version: '14.x'
@@ -61,7 +58,7 @@ stages:
 
       - script: cd
 
-      - script: yarn
+      - script: yarn install
 
       - script: yarn add ghost-storage-cloudinary
 
