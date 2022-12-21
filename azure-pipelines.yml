@@ -57,7 +57,7 @@ stages:
         displayName: Cache Yarn packages
 
       - script: npm install ghost-storage-cloudinary@2
-      - script: cd D:\a\1\s\node_modules
+      - script: cd node_modules
       - script: dir
       - script: yarn install
 
