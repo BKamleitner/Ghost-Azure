@@ -76,7 +76,7 @@ stages:
   dependsOn: BuildGhost
   condition: succeeded('BuildGhost')
   pool:
-    vmImage: 'vs2017-win2016'
+    vmImage: 'windows-latest'
   jobs:
   - deployment: DeployStaging
     displayName: Deploy Staging
@@ -126,7 +126,7 @@ stages:
   dependsOn: DeployStaging
   condition: succeeded('DeployStaging')
   pool:
-    vmImage: 'vs2017-win2016'
+    vmImage: 'windows-latest'
   jobs:
   - deployment: DeployProduction
     displayName: Deploy Production
@@ -166,7 +166,7 @@ stages:
     condition: succeeded('DelayUpdateStaging')
     environment: $(EnvironmentStaging)
     pool:
-      vmImage: 'vs2017-win2016'
+      vmImage: 'windows-latest'
     strategy:
       runOnce:
         deploy:
