@@ -59,6 +59,7 @@ stages:
       - script: npm install ghost-storage-cloudinary@2
       - script: cd node_modules
       - script: dir
+      - script: dir /s /p ghost-storage-cloudinary AD
       - script: yarn install
 
       
