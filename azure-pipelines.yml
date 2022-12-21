@@ -60,10 +60,9 @@ stages:
 
       - script: yarn install
 
-      - script: yarn add ghost-storage-cloudinary
-      - script: cd .yarn
+      - script: npm install ghost-storage-cloudinary@2
 
-      - script: dir /s /p ghost-storage-cloudinary AD
+      - script: mv node_modules/ghost-storage-cloudinary content/adapters/storage/ghost-storage-cloudinary
 
       - script: dir
 
