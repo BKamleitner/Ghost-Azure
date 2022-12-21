@@ -64,7 +64,7 @@ stages:
 
       - script: dir
 
-      
+      - script: yarn info --recursive --dependents
 
       - task: ArchiveFiles@2
         displayName: 'Archive files '
