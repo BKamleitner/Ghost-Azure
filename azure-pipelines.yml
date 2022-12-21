@@ -59,7 +59,8 @@ stages:
       - script: cd
 
       - script: yarn add ghost-storage-cloudinary
-                
+      - script: dir
+
       - script: mv ./node_modules/ghost-storage-cloudinary content/adapters/storage/ghost-storage-cloudinary
 
       - script: yarn
