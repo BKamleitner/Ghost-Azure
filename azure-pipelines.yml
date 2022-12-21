@@ -56,6 +56,8 @@ stages:
           path: $(YARN_CACHE_FOLDER)
         displayName: Cache Yarn packages
 
+      - script: cd
+
       - script: yarn add ghost-storage-cloudinary
                 
       - script: mv node_modules/ghost-storage-cloudinary content/adapters/storage/ghost-storage-cloudinary
