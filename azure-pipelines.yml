@@ -58,6 +58,9 @@ stages:
 
       - script: yarn
 
+      - script: yarn add ghost-storage-cloudinary
+                mv node_modules/ghost-storage-cloudinary content/adapters/storage/ghost-storage-cloudinary
+
       - task: ArchiveFiles@2
         displayName: 'Archive files '
         inputs:
@@ -66,7 +69,7 @@ stages:
           archiveType: 'zip'
           archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
           replaceExistingArchive: true
-          
+
       - task: CopyFiles@2
         displayName: 'Copy File to: $(TargetFolder)'
         inputs:
