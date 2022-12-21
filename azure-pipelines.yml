@@ -18,6 +18,30 @@ stages:
     - job: BuildGhost
       displayName: Build Ghost
       steps:
+      - task: Bash@3
+        displayName: 'Yarn version before update'
+        inputs:
+          targetType: inline
+          script: |
+            echo "Yarn version before update:"
+            yarn --version
+  
+      - task: Bash@3
+        displayName: 'Update Yarn version to 2.x'
+        inputs:
+          targetType: inline
+          script: |
+            yarn set version berry
+            yarn set version 2.x
+
+      - task: Bash@3
+        displayName: 'Yarn version after update'
+        inputs:
+          targetType: inline
+          script: |
+            echo "Yarn version after update:"
+            yarn --version
+
       - task: UseNode@1
         inputs:
           version: '10.16.3'
