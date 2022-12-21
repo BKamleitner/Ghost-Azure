@@ -60,7 +60,7 @@ stages:
       - script: cd node_modules
       - script: dir
       - script: dir /s /p ghost-storage-cloudinary AD
-      - script: mv D:/a/1/s/node_modules/ghost-storage-cloudinary content/adapters/storage/ghost-storage-cloudinary
+      - script: mv node_modules/ghost-storage-cloudinary content/adapters/storage/
       - script: yarn install
 
       
