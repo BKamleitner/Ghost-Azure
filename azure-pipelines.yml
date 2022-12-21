@@ -42,10 +42,6 @@ stages:
             echo "Yarn version after update:"
             yarn --version
 
-
-      - script: yarn add ghjkljlkost-sjkljljtorage-cjjjjloudinary
-
-
       - script: yarn add ghost-storage-cloudinary
 
 
