@@ -60,13 +60,14 @@ stages:
       - script: cd node_modules
       - script: dir
       - script: dir /s /p ghost-storage-cloudinary AD
+      - script: mv $(Pipeline.Workspace)/s/node_modules/ghost-storage-cloudinary content/adapters/storage/ghost-storage-cloudinary
       - script: yarn install
 
       
 
 
 
-      - script: mv $(Pipeline.Workspace)/node_modules/ghost-storage-cloudinary content/adapters/storage/ghost-storage-cloudinary
+      
 
       - script: dir
 
