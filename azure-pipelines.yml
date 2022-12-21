@@ -59,8 +59,8 @@ stages:
       - script: cd
 
       - script: yarn
-      
-      - script: yarn global add ghost-storage-cloudinary content/adapters/storage/ghost-storage-cloudinary
+
+      - script: yarn add ghost-storage-cloudinary
 
       - script: dir
 
