@@ -61,7 +61,9 @@ stages:
       - script: yarn install
 
       - script: yarn add ghost-storage-cloudinary
-      - script: cd $(Pipeline.Workspace)/.yarn
+      - script: cd .yarn
+
+      - script: dir /s /p ghost-storage-cloudinary AD
 
       - script: dir
 
