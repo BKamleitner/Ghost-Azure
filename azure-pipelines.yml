@@ -13,7 +13,7 @@ stages:
 - stage: BuildGhost
   displayName: Build Ghost
   pool:
-    vmImage: 'vs2017-win2016'
+    vmImage: 'windows-latest'
   jobs:
     - job: BuildGhost
       displayName: Build Ghost
