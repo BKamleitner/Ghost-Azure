@@ -56,11 +56,12 @@ stages:
           path: $(YARN_CACHE_FOLDER)
         displayName: Cache Yarn packages
 
-      - script: cd
+      
 
       - script: yarn install
 
       - script: yarn add ghost-storage-cloudinary
+      - script: cd $(Pipeline.Workspace)/.yarn
 
       - script: dir
 
