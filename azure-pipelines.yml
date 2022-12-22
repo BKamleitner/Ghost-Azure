@@ -22,7 +22,7 @@ stages:
 
       - task: UseNode@1
         inputs:
-          version: '10.16.3'
+          version: '10.13.0'
       - script: node -v
       - script: node -p "process.arch"
       - task: Cache@2
