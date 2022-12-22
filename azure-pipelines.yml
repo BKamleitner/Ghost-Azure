@@ -146,7 +146,7 @@ stages:
     steps:
       - task: Delay@1
         inputs:
-          delayForMinutes: '15'
+          delayForMinutes: '5'
   - deployment: UpdateStaging
     displayName: Update Staging
     dependsOn: DelayUpdateStaging
