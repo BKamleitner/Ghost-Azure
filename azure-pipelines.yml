@@ -18,17 +18,11 @@ stages:
     - job: BuildGhost
       displayName: Build Ghost
       steps:
-      - task: Bash@3
-        displayName: 'Update Yarn version to 2.x'
-        inputs:
-          targetType: inline
-          script: |
-            yarn set version berry
-            yarn set version 2.x
+
 
       - task: UseNode@1
         inputs:
-          version: '14.15.0'
+          version: '10.16.3'
       - script: node -v
       - script: node -p "process.arch"
       - task: Cache@2
