@@ -44,7 +44,7 @@ stages:
 
       - task: UseNode@1
         inputs:
-          version: '14.x'
+          version: '14.15.0'
       - script: node -v
       - script: node -p "process.arch"
       - task: Cache@2
@@ -55,24 +55,8 @@ stages:
             v3 | yarn
           path: $(YARN_CACHE_FOLDER)
         displayName: Cache Yarn packages
-
-      - script: npm install ghost-storage-cloudinary@2
-      - script: cd node_modules
-      - script: dir
-      - script: dir /s /p ghost-storage-cloudinary AD
-      - script: mkdir content/adapters/storage/ghost-storage-cloudinary/
-      - script: mv node_modules/ghost-storage-cloudinary content/adapters/storage/ghost-storage-cloudinary/
-      - script: yarn install
-
       
-
-
-
-      
-
-      - script: dir
-
-      - script: yarn info --recursive --dependents
+      - script: yarn
 
       - task: ArchiveFiles@2
         displayName: 'Archive files '
