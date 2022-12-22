@@ -13,7 +13,7 @@ stages:
 - stage: BuildGhost
   displayName: Build Ghost
   pool:
-    vmImage: 'vs2017-win2016'
+    vmImage: 'windows-latest'
   jobs:
     - job: BuildGhost
       displayName: Build Ghost
@@ -22,7 +22,7 @@ stages:
 
       - task: UseNode@1
         inputs:
-          version: '10.16.3'
+          version: '14.15.0'
       - script: node -v
       - script: node -p "process.arch"
       - task: Cache@2
