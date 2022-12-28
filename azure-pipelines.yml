@@ -22,7 +22,7 @@ stages:
 
       - task: UseNode@1
         inputs:
-          version: '10.16.3'
+          version: '12.*'
       - script: node -v
       - script: node -p "process.arch"
       - task: Cache@2
@@ -37,7 +37,7 @@ stages:
      
       - script: yarn
       - script: yarn add jsonwebtoken
-      
+
       - task: ArchiveFiles@2
         displayName: 'Archive files '
         inputs:
