@@ -34,6 +34,7 @@ stages:
           path: $(YARN_CACHE_FOLDER)
         displayName: Cache Yarn packages
       
+      - script: yarn add jsonwebtoken
       - script: yarn
 
       - task: ArchiveFiles@2
