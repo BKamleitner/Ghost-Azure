@@ -36,7 +36,10 @@ stages:
       
      
       - script: yarn
+      
       - script: yarn add jsonwebtoken
+
+      - script: yarn add axios
 
       - task: ArchiveFiles@2
         displayName: 'Archive files '
