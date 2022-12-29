@@ -33,13 +33,8 @@ stages:
             v3 | yarn
           path: $(YARN_CACHE_FOLDER)
         displayName: Cache Yarn packages
-      
-     
+           
       - script: yarn
-      
-      - script: yarn add jsonwebtoken
-
-      - script: yarn add axios
 
       - task: ArchiveFiles@2
         displayName: 'Archive files '
